@@ -7,6 +7,8 @@ import { ptBR } from "date-fns/locale";
 export function History() {
   const { cycles } = useContext(CyclesContext);
 
+  const reversedCycles = cycles.slice(0).reverse();
+
   return (
     <HistoryContainer>
       <h1>Meu histórico</h1>
@@ -21,13 +23,13 @@ export function History() {
             </tr>
           </thead>
           <tbody>
-            {cycles.map((cycle) => {
+            {reversedCycles.map((cycle) => {
               return (
                 <tr key={cycle.id}>
                   <td>{cycle.task}</td>
                   <td>{cycle.minutesAmount} minutos</td>
                   <td>
-                    {formatDistanceToNow(cycle.startDate, {
+                    {formatDistanceToNow(new Date(cycle.startDate), {
                       addSuffix: true,
                       locale: ptBR,
                     })}

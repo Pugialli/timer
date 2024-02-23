@@ -15,6 +15,7 @@ export function NewCycleForm() {
         list="task-suggestions"
         disabled={!!activeCycle}
         placeholder="Dê um nome para o seu projeto"
+        value={activeCycle?.task}
         {...register("task")}
       />
       <datalist id="task-suggestions">
@@ -33,6 +34,7 @@ export function NewCycleForm() {
         // step={5}
         min={5}
         max={60}
+        value={activeCycle?.minutesAmount}
         {...register("minutesAmount", { valueAsNumber: true })}
       />
 
