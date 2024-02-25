@@ -19,10 +19,10 @@ export function NewCycleForm() {
         {...register("task")}
       />
       <datalist id="task-suggestions">
-        <option value="Projeto 1" />
-        <option value="Projeto 2" />
-        <option value="Projeto 3" />
-        <option value="Design System do Gabs" />
+        <option value="Design System do Gabriel" />
+        <option value="Página web da Stufa" />
+        <option value="Sistema de cadastro do EJC" />
+        <option value="Formulário de inscrição do ECC" />
       </datalist>
 
       <label htmlFor="minutesAmount">durante</label>
