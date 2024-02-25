@@ -11,21 +11,12 @@ export interface Cycle {
   finishedDate?: Date;
 }
 
-interface PayloadProps {
-  newCycle: Cycle;
-}
-
-interface CyclesActions {
-  type: ActionTypes;
-  payload: PayloadProps;
-}
-
 interface CyclesState {
   cycles: Cycle[];
   activeCycleId: string | null;
 }
 
-export function cyclesReducer(state: CyclesState, action: CyclesActions) {
+export function cyclesReducer(state: CyclesState, action: any) {
   switch (action.type) {
     case ActionTypes.ADD_NEW_CYCLE:
       return produce(state, (draft) => {
