@@ -16,6 +16,7 @@ interface CyclesState {
   activeCycleId: string | null;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function cyclesReducer(state: CyclesState, action: any) {
   switch (action.type) {
     case ActionTypes.ADD_NEW_CYCLE:
