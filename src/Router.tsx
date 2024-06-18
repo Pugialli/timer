@@ -6,8 +6,8 @@ import { Home } from "./pages/Home";
 export function Router() {
   return (
     <Routes>
-      <Route path="/timer" element={<DefaultLayout />}>
-        <Route path="/timer" element={<Home />} />
+      <Route path="/" element={<DefaultLayout />}>
+        <Route path="/" element={<Home />} />
         <Route path="/history" element={<History />} />
       </Route>
     </Routes>
